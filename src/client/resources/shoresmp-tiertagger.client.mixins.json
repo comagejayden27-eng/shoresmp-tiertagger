@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "com.comag.shoresmp.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"ExampleClientMixin",
+		"PlayerTabOverlayMixin",
+		"NameTagMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

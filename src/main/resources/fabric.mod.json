@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "shoresmp-tiertagger",
+	"version": "${version}",
+	"name": "ShoreSMP TierTagger",
+	"description": "This is the ShoreSMP TierList Tier Tagger, a client-side mod for Fabric Minecraft clients. It shows ShoreSMP TierList tiers from LT5 to HT1 in-game across 5 PvP modes: Crystal, Sword, SMP, Mace, and NethOP. Players who have been tested on the ShoreSMP TierList can showcase their earned tier in-game, and other players with the mod can see those public tiers directly. Use /tiertagger (player) to show a player's ShoreSMP tiers in chat. Join the Discord: https://discord.gg/shoretiers",
+	"authors": [
+		"Lomaster68906"
+	],
+	"contributors": [
+		"Lomaster68906"
+	],
+	"contact": {
+		"homepage": "https://discord.gg/shoretiers",
+		"issues": "https://discord.gg/shoretiers"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/shoresmp-tiertagger/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"com.comag.shoresmp.ShoreSMPTierTagger"
+		],
+		"client": [
+			"com.comag.shoresmp.client.ShoreSMPTierTaggerClient"
+		],
+		"modmenu": [
+			"com.comag.shoresmp.client.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"shoresmp-tiertagger.mixins.json",
+		{
+			"config": "shoresmp-tiertagger.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
